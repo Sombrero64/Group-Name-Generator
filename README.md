@@ -4,7 +4,7 @@ Generates you some names for groups, companies, or studios.
 ```py
 from random import randint
 
-adjectives, nouns, plural  = [
+adjectives, nouns, plural = [
     "Annoying",
     "Angry",
     "Brave",
