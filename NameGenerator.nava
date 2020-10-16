@@ -1,0 +1,43 @@
+adjectives, nouns, plural = []
+	"Annoying",
+    "Angry",
+    "Brave",
+    "Wired",
+    "Silly",
+    "Inner",
+    "Outer",
+    "Inway",
+    "Outway",
+    "Peaceful",
+    "Nice",
+    "Happy",
+    "Sad"
+, [
+	"Apple",
+    "Bear",
+    "Brain",
+    "Bird",
+    "Cat",
+    "Computer",
+    "Pie",
+    "Dog",
+    "Sloth",
+    "Processor",
+    "Robot",
+    "Human"
+], true
+
+used = []
+function generateName
+	while true
+		## generate new name
+		name = convert:str(ranit(adjectives)) .. convert:str(ranit(nouns))
+		when plural: name ..= 's'
+		
+		## add name
+		when !used.contains(name)
+			used:Append(name)
+			break
+			
+repeat 10: generateName
+for b in used: print b
